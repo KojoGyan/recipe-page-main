@@ -1,0 +1,148 @@
+/* General rules*/
+
+@font-face {
+    font-family: 'outfit';
+    src: url("/assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: 'young-serif';
+    src: url("/assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+:root {
+    /*Color variables*/
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%)
+}
+
+body {
+    margin: 0;
+    background-color: var(--stone-100);
+    color: var(--stone-600);
+    font-family: 'outfit', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.75em;       
+}
+
+
+/* Typography */
+h1, 
+h2 {
+    font-family:'young-serif', 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+
+h1{
+    color: var(--stone-900);
+}
+
+.prep-card h2{
+    font-family: 'outfit',  Arial, Helvetica, sans-serif;
+    color: var(--rose-800);
+    font-size: 1.125em;
+    margin-top: 0;
+
+}
+h2 {
+    color: var(--brown-800);
+}
+
+strong {
+    font-weight: 700;
+}
+
+.img-wrapper {
+    width: 100%;
+    height: auto;
+    border-radius: .5rem;
+}
+
+img {
+    width: inherit;
+    height: auto;
+    border-radius: inherit;
+}
+
+li {
+    padding-left: 1.5em;
+}
+
+li::marker {
+    color: var(--brown-800);
+}
+
+ul li::marker {
+    font-size: .875em;
+    line-height: 0.75em;
+    vertical-align: -0.25em;
+}
+
+/* Tables */
+
+table, td, th {
+    border-bottom: solid 1px var(--stone-150);
+    border-collapse: collapse;
+    padding: .825em;
+}
+
+table {
+    width: 100%
+}
+td {
+    color: var(--brown-800);
+    font-weight: 700;
+}
+
+th {
+    font-weight: 400;
+}
+
+
+
+/* Layout */
+.prep-card {
+    background-color: var(--rose-50);
+    border-radius: .625em;
+    padding: 26px;
+}
+
+/* Mobile styles  */
+@media (max-width: 640px)
+{
+    .img-wrapper{
+        width: fill;
+        border-radius: 0px;
+    }
+
+    .page-wrapper {
+        margin: 0px;
+        width: inherit;
+        background-color: white;
+    }
+
+    .recipe-wrapper {
+        box-sizing: border-box;
+        padding: 1.5rem;
+    }
+
+
+}
+
+/* Desktop styles */
+@media (min-width: 641px)
+{
+.page-wrapper {
+box-sizing: border-box;
+min-width: 23.44rem;
+max-width: 60%;
+background-color: white;
+margin: 5rem auto;
+    border-radius: 1rem;
+    padding: 2rem;
+} 
+}
